@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 21 PHP Assignment</title>
+    <style>
+        body {
+            background-color: #fdfefe;
+            font-family: 'Segoe UI', sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 40px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #dcdde1;
+            border-left: 8px solid #0984e3;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+        }
+        h2 {
+            margin-top: 0;
+            color: #0984e3;
+        }
+        .result {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #2f3542;
+        }
+    </style>
+</head>
+<body>
+
+<h1>💻 Day 21 PHP Assignment Output</h1>
+
+<div class="card">
+    <h2>🎓 Grade Checker using if-else</h2>
+    <div class="result">
+        <?php
+        $marks = 85;
+        if ($marks >= 90) {
+            echo "Grade: A";
+        } elseif ($marks >= 80) {
+            echo "Grade: B";
+        } elseif ($marks >= 70) {
+            echo "Grade: C";
+        } else {
+            echo "Grade: Fail";
+        }
+        ?>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🎓 Grade Checker using switch</h2>
+    <div class="result">
+        <?php
+        $marks = 73;
+        switch (true) {
+            case ($marks >= 90): echo "Grade: A"; break;
+            case ($marks >= 80): echo "Grade: B"; break;
+            case ($marks >= 70): echo "Grade: C"; break;
+            default: echo "Grade: Fail";
+        }
+        ?>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🔁 For Loop (1 to 10)</h2>
+    <div class="result">
+        <?php
+        for ($i = 1; $i <= 10; $i++) {
+            echo $i . " ";
+        }
+        ?>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🔁 While Loop (Even 1 to 20)</h2>
+    <div class="result">
+        <?php
+        $i = 2;
+        while ($i <= 20) {
+            echo $i . " ";
+            $i += 2;
+        }
+        ?>
+    </div>
+</div>
+
+<div class="card">
+    <h2>📐 Function: Square of a Number</h2>
+    <div class="result">
+        <?php
+        function square($num) {
+            return $num * $num;
+        }
+        echo "Square of 6: " . square(6) . "<br>";
+        echo "Square of 9: " . square(9);
+        ?>
+    </div>
+</div>
+
+</body>
+</html>
